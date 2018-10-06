@@ -307,9 +307,13 @@ def main():
     cmd.add_argument('-verbose', default=False, action='store_true', help='verbose output')
     cmd.add_argument('-report_only', default=False, action='store_true', help='only report')
     cmd.add_argument('-trials', default=10000, type=int, help='the number of trials.')
-    cmd.add_argument('-improve_perfect', default=False, action='store_true', help='')
-    cmd.add_argument('-morpho_match', default=False, action='store_true', help='word match with morphosemantic')
-    cmd.add_argument('-semantic_match', default=False, action='store_true', help='word match with embeddings')
+    cmd.add_argument('-improve_perfect', default=False, action='store_true',
+                     help='try new alignment even with the baseline achieving an smatch of 1.0. This option '
+                          'is recommended.')
+    cmd.add_argument('-morpho_match', default=False, action='store_true',
+                     help='use to specify word match with morphosemantic')
+    cmd.add_argument('-semantic_match', default=False, action='store_true',
+                     help='use to specify word match with embeddings')
     cmd.add_argument('-show_all', default=False, action='store_true', help='show all the comments and amr graph.')
     opt = cmd.parse_args()
 

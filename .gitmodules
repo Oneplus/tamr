@@ -1,0 +1,6 @@
+[submodule "amr_parser/dynet"]
+	path = amr_parser/dynet
+	url = https://github.com/clab/dynet.git
+[submodule "amr_parser/dynet_layer"]
+	path = amr_parser/dynet_layer
+	url = https://github.com/Oneplus/dynet_layer.git
