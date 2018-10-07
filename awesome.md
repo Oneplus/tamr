@@ -24,15 +24,14 @@ jamr/scripts/preprocessing/cmd.aligned
 It takes an input AMR file with `# ::tok` header for each graph and adds
 an additional `# ::alignments` header to each graph.
 
-To replace the alignment, I commented this line and inject our alignment.
-You can do the same by [TODO].
+To replace the alignment, you can use the `replace_comments.py` scripts.
 
 ### Results on LDC2014T12
 
 | JAMR parser     | Smatch |
 |-----------------|--------|
-| +JAMR alignment |        |
-| +Our alignment  |        |
+| +JAMR alignment |   65.9 |
+| +Our alignment  |   67.6 |
 
 ### Note
 - JAMR uses the `cdec` tokenizer and our released alignments 
@@ -43,24 +42,31 @@ include the one preprocessed with `cdec`.
 
 ### Alignment Hacking
 The CAMR uses a single program entry `amr_parsing.py` in their project. 
-You can replace the JAMR aligner generated training file with ours.
+You can replace the JAMR aligner generated training file with ours,
+using the same `replace_comments.py` script.
 
 ### Results on LDC2014T12
 
 | CAMR parser     | Smatch |
 |-----------------|--------|
-| +JAMR alignment |        |
-| +Our alignment  |        |
+| +JAMR alignment |   64.6 |
+| +Our alignment  |   65.1 |
 
 ### Note
 - CAMR uses StanfordCoreNLP as tokenizer. In our release,
-we also includes an alignment on this tokenization.
+we includes the alignment results using this tokenization (noted as `sd`).
 
 ## [CCG-AMR](https://github.com/clic-lab/amr)
 "Broad-coverage CCG Semantic Parsing with AMR", Yoav Artzi, Kenton Lee, and Luke Zettlemoyer.
 
-### Alignment Hacking
-Alignment in the CCG-AMR is provided in a standalone file.
+[TBD]
+
+## [amr-eager](https://github.com/mdtux89/amr-eager)
+
+[TBD]
 
 ## [CacheTransition-Seq2Seq](https://github.com/xiaochang13/CacheTransition-Seq2seq)
+
+[TBD]
+
 

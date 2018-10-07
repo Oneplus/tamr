@@ -29,7 +29,7 @@ The code for AMR aligner is under `${TAMR_ALIGNER}`.
 - Cython (optional, for fast_smatch.py)
 
 ### Prepare resource
-We use `word2vec` for semantic matching. See the [README.md]()
+We use `word2vec` for semantic matching. See the [README.md](https://github.com/Oneplus/tamr/tree/master/amr_aligner/resources/word2vec)
 for more information about filtering wordvec.
 
 ### Prepare data
@@ -42,6 +42,8 @@ scripts/ALIGN.sh < /path/to/your/input/data > /path/to/your/baseline/data
 ```
 
 ### Run the Aligner
+Go into `${TAMR_ALIGNER}` and run the following commands:
+
 ```
 python rule_base_align.py \
     -verbose \
@@ -101,9 +103,9 @@ Before compiling, you need to fetch the `dynet` and `dynet_layer` with
 git submodule init
 git submodule update
 ```
+under `${TAMR_HOME}`.
 
-After fetching the submodules, run the following commends
-at `${TAMR_HOME}`.
+After fetching the submodules, run the following commends.
 
 ```
 cd amr_parser
@@ -130,7 +132,7 @@ python eager_oracle.py \
 ```
 
 ### Training the Parser
-
+With the following commands under `$TAMR_PARSER`:
 ```
 ./amr_parser/bin/parser_l2r \
     --dynet-seed \
@@ -160,16 +162,28 @@ python eager_oracle.py \
     1
 ```
 
-## Alignment for LDC2014T12
+## Released Alignments
+ 
+### [LDC2014T12](https://catalog.ldc.upenn.edu/LDC2014T12)
 
 You can find our alignment for LDC2014T12 under `${TAMR_HOME}/release`.
 Since JAMR and CAMR use different tokenization, our release includes
 the alignment processed with cdec tokenization and stanford tokenization.
 
+### [LDC2017T10](https://catalog.ldc.upenn.edu/LDC2017T10)
+
+WIP
+
 ## Pipeline Script
 
 We demonstrate the process in the `pipeline.sh` script.
 
-## Contract
+## Awesome AMR
+
+Our alignment helps other AMR parser to achieve better performance.
+We show how to hack into several open-source AMR parser and replace
+their alignment with ours in the [awesome.md](https://github.com/Oneplus/tamr/blob/master/awesome.md).
+
+## Contact
 
 Yijia Liu <<yjliu@ir.hit.edu.cn>>
