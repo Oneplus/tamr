@@ -1,0 +1,32 @@
+9945c9945
+<                  :name (n / name :op1 "Pakistan"))))
+---
+>                  :name (n4/ name :op1 "Pakistan"))))
+41213c41213
+<                   :time (a / after
+---
+>                   :time (a2 / after
+58814c58814
+<       :time (b / before
+---
+>       :time (b3 / before
+81657c81657
+< # ::snt A paper prepared for the talks said the expansion of the narcotics industry represents the single greatest threat to afghanistanâ€™s stability and is increasingly linked to insecurity and terrorist activities.
+---
+> # ::snt A paper prepared for the talks said the expansion of the narcotics industry represents the single greatest threat to afghanistanâ's stability and is increasingly linked to insecurity and terrorist activities.
+140733c140733
+< # ::snt Bjørn Lomborg - Wikipedia, the free encyclopedia
+---
+> # ::snt Bjorn Lomborg - Wikipedia, the free encyclopedia
+140735c140735
+< (p / person :name (n / name :op1 "Bjørn" :op2 "Lomborg")
+---
+> (p / person :name (n / name :op1 "Bjorn" :op2 "Lomborg")
+164536c164536
+< # ::snt Rockström said that when rich countries increase their consumption , they also accelerate the exploitation of the world 's national resources , with the result that they emit more greenhouse gases .
+---
+> # ::snt Rockstrom said that when rich countries increase their consumption , they also accelerate the exploitation of the world 's national resources , with the result that they emit more greenhouse gases .
+164539c164539
+<       :ARG0 (p / person :name (n / name :op1 "Rockström"))
+---
+>       :ARG0 (p / person :name (n / name :op1 "Rockstrom"))

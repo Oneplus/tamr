@@ -80,7 +80,6 @@ python replace_comments.py \
     /path/to/your/alignment/data \
     -data \
     /path/to/your/baseline/data \
-    -remove_node_edge_and_root \
     > /path/to/your/new/alignment/data
 ```
 
