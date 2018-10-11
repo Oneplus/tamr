@@ -1,0 +1,8 @@
+5201c5201
+< # ::snt Albert Einstein: Zur Elektrodynamik bewegter Korper (1905) Annalen der Physik, 322 (10): 891-921 (in German)
+---
+> # ::snt Albert Einstein: Zur Elektrodynamik bewegter Körper (1905) Annalen der Physik, 322 (10): 891-921 (in German)
+5207c5207
+<             :name (n2 / name :op1 "Zur" :op2 "Elektrodynamik" :op3 "bewegter" :op4 "Korper"))
+---
+>             :name (n2 / name :op1 "Zur" :op2 "Elektrodynamik" :op3 "bewegter" :op4 "Körper"))

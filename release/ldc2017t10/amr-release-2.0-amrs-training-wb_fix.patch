@@ -1,0 +1,8 @@
+3438a3439,3445
+> # ::id wb.eng_0002.163 ::date 2012-11-25T17:27:11 ::annotator SDL-AMR-09 ::preferred
+> # ::snt posted by <$BlogBacklinkAuthor$> @ <$BlogBacklinkDateTime$>
+> # ::save-date Wed Jul 29, 2015 ::file wb_eng_0002_163.txt
+> (p / post-01
+>       :ARG0 (p2 / person)
+>       :time (d / date-entity))
+> 

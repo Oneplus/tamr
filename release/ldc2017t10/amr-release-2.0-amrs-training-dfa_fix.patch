@@ -1,0 +1,12 @@
+6324c6324
+< # ::snt Bjorn Lomborg - Wikipedia, the free encyclopedia
+---
+> # ::snt Bjørn Lomborg - Wikipedia, the free encyclopedia
+6326c6326
+< (p / person :wiki "Bjorn_Lomborg"
+---
+> (p / person :wiki "Bjørn_Lomborg"
+6331c6331
+<       :name (n / name :op1 "Bjorn" :op2 "Lomborg"))
+---
+>       :name (n / name :op1 "Bjørn" :op2 "Lomborg"))

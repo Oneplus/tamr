@@ -1,0 +1,10 @@
+4c4
+< # ::snt Rockstrom said that when rich countries increase their consumption , they also accelerate the exploitation of the world 's national resources , with the result that they emit more greenhouse gases .
+---
+> # ::snt Rockström said that when rich countries increase their consumption , they also accelerate the exploitation of the world 's national resources , with the result that they emit more greenhouse gases .
+7,8c7,8
+<       :ARG0 (p / person :wiki "Johan_Rockstrom"
+<             :name (n / name :op1 "Rockstrom"))
+---
+>       :ARG0 (p / person :wiki "Johan_Rockström"
+>             :name (n / name :op1 "Rockström"))

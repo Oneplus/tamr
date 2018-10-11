@@ -2,7 +2,7 @@ tamr
 ====
 
 A transition-based AMR parser along with an aligner tuned by the parser.
-Used in our EMNLP 2018 paper [An AMR Aligner Tuned by Transition-based Parser]().
+Used in our EMNLP 2018 paper [An AMR Aligner Tuned by Transition-based Parser](https://arxiv.org/pdf/1810.03541.pdf).
 
 
 ## Notion
@@ -166,13 +166,14 @@ With the following commands under `$TAMR_PARSER`:
  
 ### [LDC2014T12](https://catalog.ldc.upenn.edu/LDC2014T12)
 
-You can find our alignment for LDC2014T12 under `${TAMR_HOME}/release`.
+You can find our alignment for LDC2014T12 under `${TAMR_HOME}/release/ldc2014t12`.
 Since JAMR and CAMR use different tokenization, our release includes
 the alignment processed with cdec tokenization and stanford tokenization.
 
 ### [LDC2017T10](https://catalog.ldc.upenn.edu/LDC2017T10)
 
-WIP
+You can find our alignment for LDC2014T12 under `${TAMR_HOME}/release/ldc2017t10`.
+Our release only contains alignment processed with cdec tokenization.
 
 ## Pipeline Script
 
