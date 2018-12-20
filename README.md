@@ -85,7 +85,7 @@ python replace_comments.py \
     > /path/to/your/new/alignment/data
 ```
 
-You can also use `replace_comments.py` to yield aligned AMR file
+You can also use `refresh_alignment.py` to yield aligned AMR file
 for LDC2014T12 with the alignment we release.
 
 ## Parser
