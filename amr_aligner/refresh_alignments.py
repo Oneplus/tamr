@@ -9,8 +9,7 @@ def main():
     cmd = argparse.ArgumentParser('Get the block that contains certain amr graph.')
     cmd.add_argument('-lexicon', help='the path to the alignment file.')
     cmd.add_argument('-data', help='the path to the alignment file.')
-    cmd.add_argument('-key', required=True, help='the key')
-    cmd.add_argument('-remove_node_edge_and_root', default=False, action='store_true', help='')
+    cmd.add_argument('-keep_alignment_in_node', default=False, action='store_true', help='')
     opt = cmd.parse_args()
 
     lexicon = {}
@@ -19,19 +18,28 @@ def main():
         assert len(lines) == 2
         lexicon[lines[0].strip()] = lines[1].strip()
 
-    signature = '# ::{0}'.format(opt.key)
     handler = AlignmentReader(opt.data)
     for block in handler:
         graph = Alignment(block)
+        new_alignment = lexicon[graph.n]
+
+        graph.alignments = Alignment._parse_alignment([new_alignment])
+        graph.refill_alignment()
+
         for line in block:
-            if opt.remove_node_edge_and_root and\
-                    (line.startswith('# ::node') or line.startswith('# ::edge') or line.startswith('# ::root')):
-                continue
             if line.startswith('#'):
-                if not line.startswith(signature):
-                    print(line.encode('utf-8'))
+                if line.startswith('# ::alignments'):
+                    print(new_alignment)
                 else:
-                    print(lexicon[graph.n])
+                    if not opt.keep_alignment_in_node and line.startswith('# ::node'):
+                        tokens = line.split()
+                        level = tokens[2]
+                        alignment = graph.get_node_by_level(level).alignment
+                        print('# ::node\t{0}\t{1}\t{2}'.format(
+                            tokens[2], tokens[3], '{0}-{1}'.format(alignment[0], alignment[1]) if alignment else ''))
+                    else:
+                        print(line.encode('utf-8'))
+
         print(graph.amr_graph.encode('utf-8'), end='\n\n')
 
 

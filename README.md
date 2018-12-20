@@ -72,12 +72,16 @@ id
 # ::alignment:
 ```
 
+**[2018/12/20 update]** old `replace_comments.py`
+does not update the alignment in `# ::node` fields
+which was used in `eager_oracle.py`. Please use the
+`refresh_alignment.py` script to generate new alignment data.
+Thanks @jcyk for bug shooting!
+
 After getting the alignment, use the following commands to generate
 new alignment:
 ```
-python replace_comments.py \
-    -key \
-    alignments \
+python refresh_alignments.py \
     -lexicon \
     /path/to/your/alignment/data \
     -data \
@@ -85,7 +89,7 @@ python replace_comments.py \
     > /path/to/your/new/alignment/data
 ```
 
-You can also use `refresh_alignment.py` to yield aligned AMR file
+You can also use `refresh_alignment.py  ` to yield aligned AMR file
 for LDC2014T12 with the alignment we release.
 
 ## Parser
